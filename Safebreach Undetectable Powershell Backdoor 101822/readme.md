@@ -1,4 +1,6 @@
 https://www.safebreach.com/resources/blog/safebreach-labs-researchers-uncover-new-fully-undetectable-powershell-backdoor/
+
+
 *** Do not lauch the vbs unless you're comfortable with creating a schtask to call out to the address specified in Script1.ps1 ***
 This is a modified version of the malware found in the above link. It won't call out to a C2. instead it does 127.0.0.1
 Malware tasks:
