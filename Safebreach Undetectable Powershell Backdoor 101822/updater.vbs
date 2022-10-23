@@ -1,5 +1,5 @@
 Function Base64Encode(inData)
-  'This was taken because it's not native to vbs. srcRef: https://www.motobit.com/tips/detpg_Base64Encode/
+  'This function was taken because it's not native to vbs. The Malware has its onw version (prolly the same one) srcRef: https://www.motobit.com/tips/detpg_Base64Encode/
   'rfc1521
   '2001 Antonin Foller, Motobit Software, http://Motobit.cz
   Const Base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
