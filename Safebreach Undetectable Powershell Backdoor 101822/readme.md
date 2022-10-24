@@ -1,4 +1,4 @@
-https://www.safebreach.com/resources/blog/safebreach-labs-researchers-uncover-new-fully-undetectable-powershell-backdoor/
+Ref for code: https://www.safebreach.com/resources/blog/safebreach-labs-researchers-uncover-new-fully-undetectable-powershell-backdoor/
 
 
 # Do not launch the vbs unless you're comfortable with creating a schtask to call out to the address specified in Script1.ps1
