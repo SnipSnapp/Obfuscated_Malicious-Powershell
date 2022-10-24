@@ -2,7 +2,7 @@ https://www.safebreach.com/resources/blog/safebreach-labs-researchers-uncover-ne
 
 
 # Do not launch the vbs unless you're comfortable with creating a schtask to call out to the address specified in Script1.ps1
-# This was created for testing/learning purposes Do not use for malicious reasons
+# This was created for testing/learning purposes. Do not use for malicious reasons
 ## What it does
 This is a modified version of the malware found in the above link. It won't call out to a C2. instead it does 127.0.0.1
 Malware tasks:
