@@ -3,6 +3,7 @@
 #To do what you want for testing purposes.
 $http = [System.Net.HttpListener]::new()
 $http.Prefixes.Add('http://localhost/')
+$http.Start()
 if ($http.isListenting){echo 'HTTP listening on ' + $http.Prefixes}
 else{exit}
 $hosts = @()
