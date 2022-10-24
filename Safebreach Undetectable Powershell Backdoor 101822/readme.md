@@ -1,8 +1,8 @@
 https://www.safebreach.com/resources/blog/safebreach-labs-researchers-uncover-new-fully-undetectable-powershell-backdoor/
 
 
-# *** Do not launch the vbs unless you're comfortable with creating a schtask to call out to the address specified in Script1.ps1 ***
-# *** This was created for testing/learning purposes Do not use for malicious reasons ***
+# Do not launch the vbs unless you're comfortable with creating a schtask to call out to the address specified in Script1.ps1
+# This was created for testing/learning purposes Do not use for malicious reasons
 ## What it does
 This is a modified version of the malware found in the above link. It won't call out to a C2. instead it does 127.0.0.1
 Malware tasks:
@@ -14,6 +14,9 @@ Malware tasks:
   4. temp1.ps1 goes ahead an executes the responses from the C2. 
 
 Launch by running the vbs.  Wouldn't suggest it, but it won't call out to the C2 unless the .ps1 files are changed. This version isn't going to hurt things, and is NOT AN EXACT REPLICA of what the obfuscated malware is doing (especially in the vbs commands). The VBS script was modified so it doesn't rely on the XML docs inside of the docm file. I Might later include the XML thats packed and turns into these files at a later date, we'll see.
+
+## How it Does it
+Read the de-obfuscated code, it's very heavily commented.  Start with the vbs, then Script1.ps1, then temp.ps1.
 
 ## Why does this get past AV/EDR 
 
